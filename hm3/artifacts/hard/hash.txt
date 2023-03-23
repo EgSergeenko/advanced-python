@@ -1,0 +1,2 @@
+Hash AB: 42
+Hash CD: 10
