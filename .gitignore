@@ -1,3 +1,7 @@
 .mypy_cache/
 
 venv/
+
+*.log
+
+*.aux
