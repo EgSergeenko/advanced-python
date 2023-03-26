@@ -49,9 +49,10 @@ class ValueMixin(object):
 
 
 class Matrix(HashMixin, RepresentationMixin, IOMixin, ValueMixin):
+    _cache: dict[tuple[int, int], 'Matrix'] = {}
+
     def __init__(self, value: list[list[float]]) -> None:
         self.value = value
-        self._cache: dict[tuple[int, int], Matrix] = {}
 
     def __add__(self, other: 'Matrix') -> 'Matrix':
         self._check_shapes(other, 'add')
@@ -178,11 +179,15 @@ def matrix_equality(matrix1: Matrix, matrix2: Matrix) -> bool:
 
 
 def check_collision(a: Matrix, b: Matrix, c: Matrix, d: Matrix) -> bool:
+    ab = a @ b
+    Matrix._cache = {}
+    cd = c @ d
+    Matrix._cache = {}
     conditions = [
         hash(a) == hash(c),
         not matrix_equality(a, c),
         matrix_equality(b, d),
-        not matrix_equality(a @ b, c @ d),
+        not matrix_equality(ab, cd),
     ]
 
     return all(conditions)
@@ -232,7 +237,10 @@ def hard() -> None:
         d = Matrix(b.value)
 
         if check_collision(a, b, c, d):
-            ab, cd = a @ b, c @ d
+            ab = a @ b
+            Matrix._cache = {}
+            cd = c @ d
+            Matrix._cache = {}
 
             filenames = [
                 'A.txt', 'B.txt', 'C.txt', 'D.txt', 'AB.txt', 'CD.txt',
