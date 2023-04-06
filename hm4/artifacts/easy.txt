@@ -1,0 +1,3 @@
+Func execution info: name=fib_sequential, args=(), kwargs={}, Δtime=0.01957
+Func execution info: name=fib_parallel, args=(<class 'multiprocessing.context.Process'>,), kwargs={}, Δtime=0.01893
+Func execution info: name=fib_parallel, args=(<class 'threading.Thread'>,), kwargs={}, Δtime=0.04275
