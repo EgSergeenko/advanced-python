@@ -1,0 +1,18 @@
+Input: asd, PID=6056, time=2023-04-06 20:27:14.638416
+Received command: asd, PID=6057, time=2023-04-06 20:27:14.639486
+Put command: asd, PID=6057, time=2023-04-06 20:27:14.640412
+Got command: asd, PID=6058, time=2023-04-06 20:27:14.640803
+Sent command: nfq, PID=6058, time=2023-04-06 20:27:14.642094
+Output: nfq, PID=6056, time=2023-04-06 20:27:14.642220
+Input: qwe, PID=6056, time=2023-04-06 20:27:15.101631
+Received command: qwe, PID=6057, time=2023-04-06 20:27:19.645842
+Put command: qwe, PID=6057, time=2023-04-06 20:27:19.646102
+Got command: qwe, PID=6058, time=2023-04-06 20:27:19.646390
+Sent command: djr, PID=6058, time=2023-04-06 20:27:19.646623
+Output: djr, PID=6056, time=2023-04-06 20:27:19.646682
+Input: quit, PID=6056, time=2023-04-06 20:27:19.646871
+Quitting, PID=6056, time=2023-04-06 20:27:19.646973
+Received command: quit, PID=6057, time=2023-04-06 20:27:24.651437
+Quitting, PID=6057, time=2023-04-06 20:27:24.651624
+Got command: quit, PID=6058, time=2023-04-06 20:27:24.652013
+Quitting, PID=6058, time=2023-04-06 20:27:24.652180
