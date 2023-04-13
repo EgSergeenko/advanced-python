@@ -43,3 +43,5 @@ if __name__ == '__main__':
     loop.run_until_complete(
         parse_images(URL_TEMPLATE, 3, output_dir, loop),
     )
+
+    loop.close()
